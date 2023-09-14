@@ -1,0 +1,4 @@
+com\vsMaven\Utils\Helper.class
+com\vsMaven\Utils\ReadConfig.class
+com\vsMaven\PageObjects\schoolLoginOBJ.class
+com\vsMaven\PageObjects\AssesmentObj.class
