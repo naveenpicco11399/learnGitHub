@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-// import org.testng.Assert;
+import org.testng.Assert;
 
 public class schoolLoginOBJ {
 
@@ -61,7 +61,7 @@ public class schoolLoginOBJ {
 	public void VerifySchlCode() {
 		
 		String act=schoolCodeVerify.getTagName();
-		//Assert.assertEquals("Code verified successfully", act);
+		Assert.assertEquals("Code verified successfully", act);
 	}
 
 	public void UserID(String id) {

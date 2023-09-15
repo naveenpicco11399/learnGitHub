@@ -5,8 +5,10 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
-import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.core.config.Configurator;
+import org.apache.logging.log4j.core.config.LoggerConfig;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -33,6 +35,13 @@ import com.vsMaven.Utils.Helper;
 import com.vsMaven.Utils.ReadConfig;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+
+import org.apache.logging.log4j.core.Layout;
+import org.apache.logging.log4j.core.config.Configuration;
+import org.apache.logging.log4j.core.config.Configurator;
+import org.apache.logging.log4j.core.config.LoggerConfig;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class BaseClass{
 
@@ -92,8 +101,14 @@ public class BaseClass{
 	@BeforeClass
 	public void launchBrowser() {
 
-		log = Logger.getLogger("spurtStore");
-		PropertyConfigurator.configure("log4j.properties");
+		// log = Logger.getLogger("spurtStore");
+		// PropertyConfigurator.configure("log4j.properties");
+
+	
+
+		log=LogManager.getLogger("spurtStore");
+		Configurator.initialize(null, "log4j2.xml");
+		
 
 		if (rc.getBrowser().equals("chrome")) {
 
