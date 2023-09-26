@@ -32,9 +32,9 @@ public class AssesmentTC extends BaseClass {
 		et.pass("Examtype is clicked");
 		log.info("Examtype is clicked");
 
-		// ao.Easy();
-		// et.pass("Easy is clicked");
-		// log.info("Easy is clicked");
+		ao.Easy();
+		et.pass("Easy is clicked");
+		log.info("Easy is clicked");
 
 		// waitTimeMin();
 		// ao.ExamName();
